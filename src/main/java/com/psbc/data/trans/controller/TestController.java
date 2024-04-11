@@ -6,6 +6,8 @@ import com.psbc.data.trans.dto.TestDto;
 import com.psbc.data.trans.vo.TestVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,8 +22,14 @@ public class TestController {
     @Autowired
     private TestConvert testConvert;
 
-    @GetMapping("/test")
+    @GetMapping("/test/get")
     public Result<TestVo> testGet(TestDto testDto) {
+        throw new RuntimeException();
+//         return Result.success(testConvert.dto2Vo(testDto));
+    }
+
+    @PostMapping("/test/post")
+    public Result<TestVo> testPost(@RequestBody TestDto testDto) {
         return Result.success(testConvert.dto2Vo(testDto));
     }
 }

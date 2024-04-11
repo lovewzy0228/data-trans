@@ -1,6 +1,10 @@
 spring:
   application:
     name: data-trans
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+    time-zone: GMT+8 # 时区修改为东8区
   datasource:
     dynamic:
       primary: pg #设置默认的数据源或者数据源组,默认值即为master

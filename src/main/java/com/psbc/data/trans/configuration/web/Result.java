@@ -3,6 +3,8 @@ package com.psbc.data.trans.configuration.web;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.util.Date;
+
 import static com.psbc.data.trans.common.Constants.FAIL_CODE;
 import static com.psbc.data.trans.common.Constants.SUCCESS_CODE;
 
@@ -15,8 +17,12 @@ import static com.psbc.data.trans.common.Constants.SUCCESS_CODE;
 public class Result<T> {
 
     private String code;
+
     private String message;
+
     private T data;
+
+    private Date timestamp = new Date();
 
     public static <T> Result<T> success(T t) {
         return new Result<T>().setCode(SUCCESS_CODE).setData(t);
