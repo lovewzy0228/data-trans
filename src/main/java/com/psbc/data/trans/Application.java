@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@MapperScan
+@MapperScan(basePackages = {"com.psbc.data.trans.datasource"})
 @EnableScheduling
 public class Application {
 

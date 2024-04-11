@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: data-trans
   datasource:
     dynamic:
       primary: pg #设置默认的数据源或者数据源组,默认值即为master
@@ -11,7 +13,6 @@ spring:
           url: jdbc:oracle:thin:@49.232.11.26:1521:xe
           username: c##ry
           password: itsm@123456
-
 
 mybatis-plus:
   # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
