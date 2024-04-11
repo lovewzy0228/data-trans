@@ -7,10 +7,9 @@ import com.psbc.data.trans.datasource.pg.mapper.TbInterfaceSendMapper;
 import org.springframework.stereotype.Service;
 
 /**
-* @author 86187
-* @description 针对表【tb_interface_send】的数据库操作Service实现
-* @createDate 2024-04-11 15:55:07
-*/
+ * @author jiaoyang
+ * @date 2024-04-11 16:04:58
+ */
 @Service
 public class TbInterfaceSendServiceImpl extends ServiceImpl<TbInterfaceSendMapper, TbInterfaceSend>
     implements TbInterfaceSendService{
