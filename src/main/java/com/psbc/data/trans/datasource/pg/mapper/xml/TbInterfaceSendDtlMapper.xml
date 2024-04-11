@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.psbc.data.trans.datasource.pg.mapper.TbInterfaceSendDtlMapper">
+
+    <resultMap id="BaseResultMap" type="com.psbc.data.trans.datasource.pg.entity.TbInterfaceSendDtl">
+            <result property="interfaceName" column="interface_name" jdbcType="VARCHAR"/>
+            <result property="dataDate" column="data_date" jdbcType="VARCHAR"/>
+            <result property="filePath" column="file_path" jdbcType="VARCHAR"/>
+            <result property="fileName" column="file_name" jdbcType="VARCHAR"/>
+            <result property="fileNum" column="file_num" jdbcType="INTEGER"/>
+            <result property="startTime" column="start_time" jdbcType="VARCHAR"/>
+            <result property="endTime" column="end_time" jdbcType="VARCHAR"/>
+            <result property="sendFlag" column="send_flag" jdbcType="VARCHAR"/>
+            <result property="sendTimes" column="send_times" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        interface_name,data_date,file_path,
+        file_name,file_num,start_time,
+        end_time,send_flag,send_times,
+        create_time,update_time
+    </sql>
+</mapper>

@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    dynamic:
+      primary: pg #设置默认的数据源或者数据源组,默认值即为master
+      datasource:
+        pg:
+          url: jdbc:postgresql://139.196.217.100:5432/distribution
+          username: postgres
+          password: admin@123
+        oracle:
+          url: jdbc:oracle:thin:@49.232.11.26:1521:xe
+          username: c##ry
+          password: itsm@123456
+
+
+mybatis-plus:
+  # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

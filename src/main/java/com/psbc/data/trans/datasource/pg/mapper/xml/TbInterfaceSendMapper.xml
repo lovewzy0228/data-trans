@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.psbc.data.trans.datasource.pg.mapper.TbInterfaceSendMapper">
+
+    <resultMap id="BaseResultMap" type="com.psbc.data.trans.datasource.pg.entity.TbInterfaceSend">
+            <id property="tableName" column="table_name" jdbcType="VARCHAR"/>
+            <result property="databaseType" column="database_type" jdbcType="VARCHAR"/>
+            <result property="databaseUrl" column="database_url" jdbcType="VARCHAR"/>
+            <result property="databaseName" column="database_name" jdbcType="VARCHAR"/>
+            <result property="tablePk" column="table_pk" jdbcType="VARCHAR"/>
+            <result property="tableFields" column="table_fields" jdbcType="VARCHAR"/>
+            <result property="tableType" column="table_type" jdbcType="VARCHAR"/>
+            <result property="interfaceType" column="interface_type" jdbcType="VARCHAR"/>
+            <result property="sendCycle" column="send_cycle" jdbcType="VARCHAR"/>
+            <result property="startDate" column="start_date" jdbcType="DATE"/>
+            <result property="endDate" column="end_date" jdbcType="DATE"/>
+            <result property="dailyCutTime" column="daily_cut_time" jdbcType="VARCHAR"/>
+            <result property="fileHeader" column="file_header" jdbcType="VARCHAR"/>
+            <result property="pageRowNum" column="page_row_num" jdbcType="INTEGER"/>
+            <result property="compressFlag" column="compress_flag" jdbcType="VARCHAR"/>
+            <result property="verfFlag" column="verf_flag" jdbcType="VARCHAR"/>
+            <result property="checkFlag" column="check_flag" jdbcType="VARCHAR"/>
+            <result property="checkExpression" column="check_expression" jdbcType="VARCHAR"/>
+            <result property="queryCondition" column="query_condition" jdbcType="VARCHAR"/>
+            <result property="statsValue" column="stats_value" jdbcType="NUMERIC"/>
+            <result property="localSysCode" column="local_sys_code" jdbcType="VARCHAR"/>
+            <result property="remoteSysCode" column="remote_sys_code" jdbcType="VARCHAR"/>
+            <result property="validFlag" column="valid_flag" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="databaseUser" column="database_user" jdbcType="VARCHAR"/>
+            <result property="databasePwd" column="database_pwd" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        table_name,database_type,database_url,
+        database_name,table_pk,table_fields,
+        table_type,interface_type,send_cycle,
+        start_date,end_date,daily_cut_time,
+        file_header,page_row_num,compress_flag,
+        verf_flag,check_flag,check_expression,
+        query_condition,stats_value,local_sys_code,
+        remote_sys_code,valid_flag,create_time,
+        update_time,database_user,database_pwd
+    </sql>
+</mapper>
